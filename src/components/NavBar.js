@@ -13,6 +13,10 @@ export const NavBar = () => {
         setActiveLink(value);
     };
 
+    const handleConnectClick = () => {
+        window.location.href = 'https://github.com/Nivaniz';
+    }
+
     useEffect(() => {
         const onScroll = () => {
             if (window.scrollY > 50) {
@@ -44,21 +48,21 @@ export const NavBar = () => {
                             className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} 
                             onClick={() => onUpdateActiveLink('home')}
                         >
-                            Home
+                            Inicio
                         </Nav.Link>
                         <Nav.Link 
                             href="#skills" 
                             className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} 
                             onClick={() => onUpdateActiveLink('skills')}
                         >
-                            Skills
+                            Habilidades
                         </Nav.Link>
                         <Nav.Link 
                             href="#projects" 
                             className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} 
                             onClick={() => onUpdateActiveLink('projects')}
                         >
-                            Projects
+                            Proyectos
                         </Nav.Link>
                     </Nav>
                     <span className="navbar-text">
@@ -67,8 +71,8 @@ export const NavBar = () => {
                             <a href="#"><img src={navIcon2} alt="" /></a>
                             <a href="#"><img src={navIcon3} alt="" /></a>
                         </div>
-                        <button className="vvd" onClick={() => console.log('connect')}>
-                            <span>Vamos a conectar</span>
+                        <button className="vvd" onClick={handleConnectClick}>
+                            <span>Entra a mi Git</span>
                         </button>
                     </span>
                 </Navbar.Collapse>
